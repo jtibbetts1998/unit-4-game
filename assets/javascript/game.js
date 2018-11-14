@@ -15,17 +15,17 @@ console.log("Click")
     function start(){
         userScore = 0;
         totalScore = [19-120];
-        crystal1 = math.floor(math.random() * 12) + 1;
-        crystal2 = math.floor(math.random() * 12) + 1;
-        crystal3 = math.floor(math.random() * 12) + 1;
-        crystal4 = math.floor(math.random() * 12) + 1;
+        crystal1 = Math.floor(Math.random() * 12) + 1;
+        crystal2 = Math.floor(Math.random() * 12) + 1;
+        crystal3 = Math.floor(Math.random() * 12) + 1;
+        crystal4 = Math.floor(Math.random() * 12) + 1;
 
         console.log (crystal1, crystal2, crystal3, crystal4);
 
     }
 
 
-
+start();
 // Making crystals functional
     $("#crystal1").on("click", function() {
         console.log("Click")
@@ -41,7 +41,7 @@ console.log("Click")
         }
 // If user losses game, add one to lose column and reset score to zero
     else if (userScore > totalScore) {
-        lose++;
+        losses++;
         lossesDisplay.innerHTML = losses;
         console.log("You Lose");
         start();
