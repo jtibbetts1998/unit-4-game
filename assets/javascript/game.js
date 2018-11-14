@@ -6,19 +6,29 @@ console.log("Hi")
     var userScore = 0;
     var totalScore = [];
 
-    var winsText = document.getElementById("wins");
-    var lossesText = document.getElementById("losses");
-    var userScoreText = document.getElementById("userscore");
-    var comScoreText = document.getElementById("totalScore");
+    var winsDisplay = document.getElementById("wins");
+    var lossesDisplay = document.getElementById("losses");
+    var userScoreDisplay = document.getElementById("userscore");
+    var comScoreDisplay = document.getElementById("totalScore");
 
-    funtion reset() {
-    userScore = 0;    
-    totalScore = [];
-    }
+
 // Making crystals functional
     $(".crystal").on("click", function() {
-        console.log("Hi")
-    if 
+        console.log("Click")
+
+// If user wins game, add one to win column and reset score to zero
+    if (userScore === totalScore) {
+        wins++;
+        winsDisplay.innerHTML = wins;
+        console.log("You Win");
+        reset();  
+        }
+    //if () {
+
+       // }
+
+    winsDisplay.textContent = "wins: " + wins;
+    lossesDisplay.textContent = "losses: " +losses;
     });
 
 
