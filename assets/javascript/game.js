@@ -12,7 +12,7 @@ console.log("Click")
     var totalScoreDisplay = document.getElementById("totalScore");
 
 // Assigning random values
-    function start(){
+    function start() {
         userScore = 0;
         totalScore = Math.floor(Math.random() * 120) + 19;
         crystal1 = Math.floor(Math.random() * 12) + 1;
