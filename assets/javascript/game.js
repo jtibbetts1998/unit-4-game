@@ -1,5 +1,5 @@
 console.log("Click")
-// Making scoreboard
+// Establishing scoreboard
 
     var wins = 0;
     var losses = 0;
@@ -8,10 +8,10 @@ console.log("Click")
 
     var winsDisplay = document.getElementById("wins");
     var lossesDisplay = document.getElementById("losses");
-    var userScoreDisplay = document.getElementById("userscore");
+    var userScoreDisplay = document.getElementById("userScore");
     var totalScoreDisplay = document.getElementById("totalScore");
 
-// Starting game and assigning random values
+// Assigning random values
     function start(){
         userScore = 0;
         totalScore = Math.floor(Math.random() * 120) + 19;
@@ -21,6 +21,10 @@ console.log("Click")
         crystal4 = Math.floor(Math.random() * 12) + 1;
 
         console.log (crystal1, crystal2, crystal3, crystal4);
+        winsDisplay.textContent = "Wins: " + wins;
+        lossesDisplay.textContent = "Losses: " + losses;
+        userScoreDisplay.textContent = "User Score: " + userScore;
+        totalScoreDisplay.textContent = "Total Score: " + totalScore;
 
     }
 
@@ -31,26 +35,41 @@ start();
         console.log("Click")
         userScore += crystal1;
         console.log(userScore);
+        winsDisplay.textContent = "Wins: " + wins;
+        lossesDisplay.textContent = "Losses: " + losses;
+        userScoreDisplay.textContent = "User Score: " + userScore;
+        totalScoreDisplay.textContent = "Total Score: " + totalScore;
     });
 
     $("#crystal2").on("click", function() {
         console.log("Click")
         userScore += crystal2;
         console.log(userScore);
+        winsDisplay.textContent = "Wins: " + wins;
+        lossesDisplay.textContent = "Losses: " + losses;
+        userScoreDisplay.textContent = "User Score: " + userScore;
+        totalScoreDisplay.textContent = "Total Score: " + totalScore;
     });
     
     $("#crystal3").on("click", function() {
         console.log("Click")
         userScore += crystal3;
         console.log(userScore);
+        winsDisplay.textContent = "Wins: " + wins;
+        lossesDisplay.textContent = "Losses: " + losses;
+        userScoreDisplay.textContent = "User Score: " + userScore;
+        totalScoreDisplay.textContent = "Total Score: " + totalScore;
     });
 
     $("#crystal4").on("click", function() {
         console.log("Click")
         userScore += crystal4;
         console.log(userScore);
+        winsDisplay.textContent = "Wins: " + wins;
+        lossesDisplay.textContent = "Losses: " + losses;
+        userScoreDisplay.textContent = "User Score: " + userScore;
+        totalScoreDisplay.textContent = "Total Score: " + totalScore;
     });
-    
 
 // If user wins game, add one to win column and reset score to zero
     if (userScore === totalScore) {
@@ -66,9 +85,3 @@ start();
         console.log("You Lose");
         start();
     }
-
-    winsDisplay.textContent = "Wins: " + wins;
-    lossesDisplay.textContent = "Losses: " + losses;
-    userScoreDisplay.textContent = "User Score: " +userScore;
-
-
